@@ -68,7 +68,7 @@ public class UserRegistrationTest {
     }
     //test case for invalid password
     @Test
-    public void testInValidPadword(){
+    public void testInValidPassword(){
         UserRegistration user = new UserRegistration();
         boolean isValid = user.validatePassword("sagar@123");
         Assert.assertFalse(isValid);
