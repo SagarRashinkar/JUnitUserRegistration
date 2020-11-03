@@ -15,4 +15,8 @@ public class UserRegistration {
     public boolean validateMobile(String mobile){
         return (mobile.matches("(0|91)?[7-9][0-9]{9}"));
     }
+
+    public boolean validatePassword(String pass){
+        return (pass.matches("^*(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$"));
+    }
 }

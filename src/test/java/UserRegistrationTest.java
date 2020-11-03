@@ -58,4 +58,19 @@ public class UserRegistrationTest {
         boolean isValid = user.validateMobile("64255278");
         Assert.assertTrue(isValid);
     }
+
+    //test case for valid password
+    @Test
+    public void testValidPadword(){
+        UserRegistration user = new UserRegistration();
+        boolean isValid = user.validatePassword("Sagar@123");
+        Assert.assertTrue(isValid);
+    }
+    //test case for invalid password
+    @Test
+    public void testInValidPadword(){
+        UserRegistration user = new UserRegistration();
+        boolean isValid = user.validatePassword("sagar@123");
+        Assert.assertFalse(isValid);
+    }
 }
