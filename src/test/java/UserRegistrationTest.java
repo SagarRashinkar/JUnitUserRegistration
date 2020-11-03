@@ -44,5 +44,18 @@ public class UserRegistrationTest {
         boolean isValid = user.validateEmail(".abc@gmail.com");
         Assert.assertTrue(isValid);
     }
-
+    //test case for valid mobile number
+    @Test
+    public void testValidMobile(){
+        UserRegistration user = new UserRegistration();
+        boolean isValid = user.validateMobile("919527721648");
+        Assert.assertTrue(isValid);
+    }
+    //test case for Invalid mobile number
+    @Test
+    public void testInvalidMobile(){
+        UserRegistration user = new UserRegistration();
+        boolean isValid = user.validateMobile("64255278");
+        Assert.assertTrue(isValid);
+    }
 }
