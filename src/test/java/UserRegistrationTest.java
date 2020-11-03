@@ -73,4 +73,11 @@ public class UserRegistrationTest {
         boolean isValid = user.validatePassword("sagar@123");
         Assert.assertFalse(isValid);
     }
+    //test case for mood analysis
+    @Test
+    public void moodAnalyser_Test_SAD() {
+        UserRegistration user = new UserRegistration();
+        String Mood = user.moodAnalyse("Sagar", "Rashinkar", "sagarrashinkar2@gmail.com", "919595768860", "Sagar@123");
+        Assert.assertEquals("HAPPY", Mood);
+    }
 }

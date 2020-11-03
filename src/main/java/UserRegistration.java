@@ -19,4 +19,13 @@ public class UserRegistration {
     public boolean validatePassword(String pass){
         return (pass.matches("^*(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$"));
     }
+    public String moodAnalyse(String fname, String lname, String email, String mobile, String pass) {
+        if (validateFName(fname) == true && validateLName(lname) == true && validateEmail(email) == true
+                && validateMobile(mobile) == true && validatePassword(pass)) {
+            return "HAPPY";
+        } else {
+            return "SAD";
+        }
+
+    }
 }
